@@ -13,6 +13,7 @@ namespace Hit_The_Keys
     public partial class hitTheKeys : Form
     {
         Random random = new Random();
+        Stats stats = new Stats();
 
         public hitTheKeys()
         {

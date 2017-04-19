@@ -28,3 +28,9 @@ MultiColumn property to True. Set its Font to 72 point bold.
 * Set the Timer control’s Interval property to 800, so that it calls its method every 800 milliseconds.
 * Set the Timer control’s Enabled property to True. This way the Timer starts ticking automatically and there is no need to call the Start() method of the Timer class in the project code.
 * Add the code for the Timer. Random capital letters are appearing in the ListBox. When they are more than seven, the game ends.
+
+&nbsp;
+## 04 Add the Stats class
+* Add a class called Stats to your project.
+* It’ll have four int fields called Total, Missed, Correct, and Accuracy, and a method called Update with one bool parameter: true if  the player typed a correct letter that was in the ListBox, or false if  the player missed one.
+* We need an instance of the new Stats class to actually store the information, so add a field to the top of the form, called stats.
