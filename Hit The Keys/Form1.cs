@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hit_The_Keys
 {
-    public partial class Form1 : Form
+    public partial class hitTheKeys : Form
     {
-        public Form1()
+        public hitTheKeys()
         {
             InitializeComponent();
         }
