@@ -46,7 +46,23 @@ namespace Hit_The_Keys
                     timer1.Interval -= 7;
                 if (timer1.Interval > 100)
                     timer1.Interval -= 2;
+                difficultyProgressBar.Value = 800 - timer1.Interval;
+                // The user pressed a correct key, so update the Stats object
+                // by calling its Update() method with the argument true
+                stats.Update(true);
             }
+            else
+            {
+                // The user pressed an incorrect key, so update the Stats object
+                // by calling its Update() method with the argument false
+                stats.Update(false);
+            }
+            // Update the labels on the StatusStrip
+            correctLabel.Text = "Correct: " + stats.Correct;
+            missedLabel.Text = "Missed: " + stats.Missed;
+            totalLabel.Text = "Total: " + stats.Total;
+            accuracyLabel.Text = "Accuracy: " + stats.Accuracy + "%";
         }
+                
     }
 }

@@ -41,4 +41,10 @@ MultiColumn property to True. Set its Font to 72 point bold.
 * Set the Form’s KeyPreview property to True, so that keyboard events for controls on the form are registered with the form.
 * There’s one last thing your game needs to do: any time the player hits a key, it needs to check if  that key is correct (and remove the letter from the ListBox if  it is), and update the stats on the StatusStrip.
 * Select the form. Then go to the Properties window and click on the lightning bolt button. Scroll to the KeyDown row and double-click on it. This tells the IDE to add a method called hitTheKeys_KeyDown() that gets called every time the user presses a key.
-* Add the code for the method. If the user pressed a key that's in the ListBox, remove it and then make the game a little faster. 
+* Add the code for the method. If the user pressed a key that's in the ListBox, remove it and then make the game a little faster.
+
+&nbsp;
+## 06 Update the Stats object
+* In the hitTheKeys_KeyDown() method, add more code in order to update the Stats object accordingly with each keystroke.
+* Add the code that updates the labels on the StatusStrip.
+* Set the ProgressBar control’s Maximum property to 801, so that the display is proportional to the difficulty level and the difficultyProgressBar.Value is in the allowed range.
