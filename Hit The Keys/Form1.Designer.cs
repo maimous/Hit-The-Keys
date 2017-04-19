@@ -54,6 +54,12 @@
             this.listBox1.Size = new System.Drawing.Size(856, 131);
             this.listBox1.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 800;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // correctLabel
             // 
             this.correctLabel.Name = "correctLabel";
@@ -81,7 +87,7 @@
             // difficultyLabel
             // 
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(471, 17);
+            this.difficultyLabel.Size = new System.Drawing.Size(502, 17);
             this.difficultyLabel.Spring = true;
             this.difficultyLabel.Text = "Difficulty";
             this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

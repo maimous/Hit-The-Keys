@@ -22,3 +22,9 @@ MultiColumn property to True. Set its Font to 72 point bold.
 “Missed: 0”, “Total: 0”, and “Accuracy: 0%”.
 * Add one more StatusLabel. Set its Spring to True, TextAlign to MiddleRight, and Text to “Difficulty”. Finally, add a ProgressBar and name it difficultyProgressBar.
 * Set the StatusStrip’s SizingGrip property to False (hit Escape if  you’ve got a child StatusLabel or ProgressBar selected to return the IDE’s focus to the parent StatusStrip).
+
+&nbsp;
+## 03 Configure the Timer control
+* Set the Timer control’s Interval property to 800, so that it calls its method every 800 milliseconds.
+* Set the Timer control’s Enabled property to True. This way the Timer starts ticking automatically and there is no need to call the Start() method of the Timer class in the project code.
+* Add the code for the Timer. Random capital letters are appearing in the ListBox. When they are more than seven, the game ends.
