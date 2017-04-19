@@ -31,5 +31,22 @@ namespace Hit_The_Keys
                 timer1.Stop();
             }
         }
+
+        private void hitTheKeys_KeyDown(object sender, KeyEventArgs e)
+        {
+            // If the user pressed a key that's in the ListBox, remove it
+            // and then make the game a little faster
+            if (listBox1.Items.Contains(e.KeyCode))
+            {
+                listBox1.Items.Remove(e.KeyCode);
+                listBox1.Refresh();
+                if (timer1.Interval > 400)
+                    timer1.Interval -= 10;
+                if (timer1.Interval > 250)
+                    timer1.Interval -= 7;
+                if (timer1.Interval > 100)
+                    timer1.Interval -= 2;
+            }
+        }
     }
 }

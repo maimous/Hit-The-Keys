@@ -34,3 +34,11 @@ MultiColumn property to True. Set its Font to 72 point bold.
 * Add a class called Stats to your project.
 * It’ll have four int fields called Total, Missed, Correct, and Accuracy, and a method called Update with one bool parameter: true if  the player typed a correct letter that was in the ListBox, or false if  the player missed one.
 * We need an instance of the new Stats class to actually store the information, so add a field to the top of the form, called stats.
+
+
+&nbsp;
+## 05 Add the keystroke handling logic
+* Set the Form’s KeyPreview property to True, so that keyboard events for controls on the form are registered with the form.
+* There’s one last thing your game needs to do: any time the player hits a key, it needs to check if  that key is correct (and remove the letter from the ListBox if  it is), and update the stats on the StatusStrip.
+* Select the form. Then go to the Properties window and click on the lightning bolt button. Scroll to the KeyDown row and double-click on it. This tells the IDE to add a method called hitTheKeys_KeyDown() that gets called every time the user presses a key.
+* Add the code for the method. If the user pressed a key that's in the ListBox, remove it and then make the game a little faster. 

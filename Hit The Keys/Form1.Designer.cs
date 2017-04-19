@@ -94,6 +94,7 @@
             // 
             // difficultyProgressBar
             // 
+            this.difficultyProgressBar.Maximum = 701;
             this.difficultyProgressBar.Name = "difficultyProgressBar";
             this.difficultyProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
@@ -122,10 +123,12 @@
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "hitTheKeys";
             this.Text = "Hit The Keys!";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.hitTheKeys_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
