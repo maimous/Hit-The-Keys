@@ -48,3 +48,8 @@ MultiColumn property to True. Set its Font to 72 point bold.
 * In the hitTheKeys_KeyDown() method, add more code in order to update the Stats object accordingly with each keystroke.
 * Add the code that updates the labels on the StatusStrip.
 * Set the ProgressBar control’s Maximum property to 801, so that the display is proportional to the difficulty level and the difficultyProgressBar.Value is in the allowed range.
+
+&nbsp;
+## 07 Press Enter to start
+* Set the Timer control’s Enabled property to False.
+* Add code to start timer ticking on Enter key press.

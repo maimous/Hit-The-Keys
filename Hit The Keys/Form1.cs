@@ -18,35 +18,47 @@ namespace Hit_The_Keys
         public hitTheKeys()
         {
             InitializeComponent();
+            listBox1.Items.Add("Press Enter to start");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
+        {            
             // Add a random key to the ListBox
             listBox1.Items.Add((Keys)random.Next(65, 90));
             if (listBox1.Items.Count > 7)
             {
                 listBox1.Items.Clear();
-                listBox1.Items.Add("Game over");
+                listBox1.Items.Add("Game over!");
                 timer1.Stop();
             }
         }
 
         private void hitTheKeys_KeyDown(object sender, KeyEventArgs e)
         {
+            // Start Timer ticking with pressing "Enter"
+            if (e.KeyCode == Keys.Enter)
+            {
+                listBox1.Items.Clear();
+                timer1.Start();
+            }
+
             // If the user pressed a key that's in the ListBox, remove it
             // and then make the game a little faster
-            if (listBox1.Items.Contains(e.KeyCode))
+                if (listBox1.Items.Contains(e.KeyCode))
             {
                 listBox1.Items.Remove(e.KeyCode);
                 listBox1.Refresh();
-                if (timer1.Interval > 400)
+                if (timer1.Interval > 1000)
                     timer1.Interval -= 10;
+                if (timer1.Interval > 600)
+                    timer1.Interval -= 5;
+                if (timer1.Interval > 400)
+                    timer1.Interval -= 3;
                 if (timer1.Interval > 250)
-                    timer1.Interval -= 7;
-                if (timer1.Interval > 100)
                     timer1.Interval -= 2;
-                difficultyProgressBar.Value = 800 - timer1.Interval;
+                if (timer1.Interval > 100)
+                    timer1.Interval -= 1;
+                difficultyProgressBar.Value = 1200 - timer1.Interval;
                 // The user pressed a correct key, so update the Stats object
                 // by calling its Update() method with the argument true
                 stats.Update(true);

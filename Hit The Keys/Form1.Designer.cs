@@ -56,8 +56,7 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 800;
+            this.timer1.Interval = 1200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // correctLabel
@@ -87,16 +86,16 @@
             // difficultyLabel
             // 
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(471, 17);
+            this.difficultyLabel.Size = new System.Drawing.Size(502, 17);
             this.difficultyLabel.Spring = true;
             this.difficultyLabel.Text = "Difficulty";
             this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // difficultyProgressBar
             // 
-            this.difficultyProgressBar.Maximum = 801;
+            this.difficultyProgressBar.Maximum = 1201;
             this.difficultyProgressBar.Name = "difficultyProgressBar";
-            this.difficultyProgressBar.Size = new System.Drawing.Size(100, 16);           
+            this.difficultyProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
             // statusStrip1
             // 
