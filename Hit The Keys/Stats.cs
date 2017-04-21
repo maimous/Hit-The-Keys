@@ -27,5 +27,12 @@ namespace Hit_The_Keys
             }
             Accuracy = 100 * Correct / Total ;
         }
+
+        public void Initialize() {
+            Total = 0;
+            Missed = 0;
+            Correct = 0;
+            Accuracy = 0;
+        }
     }
 }

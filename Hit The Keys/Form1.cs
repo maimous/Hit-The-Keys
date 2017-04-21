@@ -39,6 +39,8 @@ namespace Hit_The_Keys
             if (e.KeyCode == Keys.Enter)
             {
                 listBox1.Items.Clear();
+                stats.Initialize();
+                timer1.Interval = 1200; 
                 timer1.Start();
             }
 
@@ -63,7 +65,7 @@ namespace Hit_The_Keys
                 // by calling its Update() method with the argument true
                 stats.Update(true);
             }
-            else
+            else if (e.KeyCode != Keys.Enter)
             {
                 // The user pressed an incorrect key, so update the Stats object
                 // by calling its Update() method with the argument false
@@ -75,6 +77,10 @@ namespace Hit_The_Keys
             totalLabel.Text = "Total: " + stats.Total;
             accuracyLabel.Text = "Accuracy: " + stats.Accuracy + "%";
         }
-                
+
+        private void hitTheKeys_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

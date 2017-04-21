@@ -53,3 +53,8 @@ MultiColumn property to True. Set its Font to 72 point bold.
 ## 07 Press Enter to start
 * Set the Timer control’s Enabled property to False.
 * Add code to start timer ticking on Enter key press.
+
+&nbsp;
+## 08 Reset stats on restart
+* Set all stats to zero with stats.Initialize() when Enter is pressed.
+* Do not add one to missed when Enter is pressed.
